@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "en", autoDisplay: false },
+      "google_translate_element"
+    );
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const select = document.getElementById("lang");
+
+    // after reload, show the chosen language in the dropdown
+    const match = document.cookie.match(/googtrans=\/en\/([a-z-]+)/i);
+    if (match) select.value = match[1];
+
+    // when a language is picked, save it and reload
+    select.addEventListener("change", function () {
+      document.cookie = "googtrans=/en/" + this.value + "; path=/";
+      location.reload();
+    });
+  });
+</script>
+
+<body>
+    <div class="overall">
+        <div class="nav">
+            <div class="logo">
+                <img src="logo.png" height="45px" alt="">
+            </div>
+            <div class="button">
+               
+
+                <select id="lang">
+  <option value="en">English</option>
+  <option value="te">తెలుగు</option>
+  <option value="hi">हिन्दी</option>
+  
+</select>
+
+<div id="google_translate_element" style="display:none"></div>
+
+                <button class="two">
+                    Sign In
+                </button>
+
+            </div>
+        </div>
+        <div class="background">
+            <div class="scroll-container">
+                <div class="scroll">
+                    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_auto_scroll/IN-en-20250414-TRIFECTA-d413ab11-d58f-40f6-9105-a8600c4a01ca_large.jpg"
+                        alt="">
+                    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_auto_scroll/IN-en-20250414-TRIFECTA-d413ab11-d58f-40f6-9105-a8600c4a01ca_large.jpg"
+                        alt="">
+                    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_auto_scroll/IN-en-20250414-TRIFECTA-d413ab11-d58f-40f6-9105-a8600c4a01ca_large.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="content-overlay">
+                <h1>
+                    Unlimited movies,<br> TV shows and <br> more
+                </h1>
+                <p>Starts at ₹149.Cancel at anytime.</p>
+                <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                <div class="buttons2">
+    <input class="three" type="text" placeholder="Email address">
+    <button class="four" type="button">Get Started &gt;</button>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="middle">
+
+        <h2>
+            Trending Now
+        </h2>
+        <div class="images">
+<img id="firstPoster" src="/static/Screenshot_23-4-2025_144918_www.netflix.com.png" height="250px" width="130px" alt="">            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+            <img src="{{ url_for('static', filename='Screenshot_23-4-2025_144918_www.netflix.com.png') }}" height="250px" width="130px" alt="">
+        <!-- <img src="Screenshot_23-4-2025_144918_www.netflix.com.png" height="250px" width="130px" alt="">
+        <img src="Screenshot_23-4-2025_144918_www.netflix.com.png" height="250px" width="130px" alt="">
+        <im
+        <img src="Screenshot_23-4-2025_144918_www.netflix.com.png" height="250px" width="130px" alt=""> -->
+    </div>
+
+    <div>
+        <h2>
+            More reasons to join
+        </h2>
+        <div class="boxes">
+            <div class="box">
+                <h4>Enjoy on your TV</h4>
+                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+
+
+            </div>
+            <div class="box">
+                <h4>Download your shows to watch offline</h4>
+                Save your favourites easily and always have something to watch.
+
+
+            </div>
+            <div class="box">
+                <h4>Watch everywhere</h4>
+                Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.
+
+
+            </div>
+            <div class="box">
+                <h4>Create profiles for kids</h4>
+                Send kids on adventures with their favourite characters in a space made just for them — free with your
+                membership
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="frequently">
+    <h2>Frequently asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">What is Netflix?</div>
+        <div class="faq-answer">Netflix is a streaming service that offers a wide variety of TV shows, movies, and more.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How much does Netflix cost?</div>
+        <div class="faq-answer">Watch Netflix on your smartphone, tablet, Smart TV, or laptop for one fixed monthly fee.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Where can I watch?</div>
+        <div class="faq-answer">Stream anywhere, anytime, on an unlimited number of devices.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How do I cancel?</div>
+        <div class="faq-answer">Netflix is flexible. There are no annoying contracts and no commitments.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">What can I watch on Netflix?</div>
+        <div class="faq-answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime, and more.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Can kids watch Netflix?</div>
+        <div class="faq-answer">The Netflix Kids experience gives parents control while kids enjoy family-friendly TV shows and movies.</div>
+    </div>
+</div>
+
+
+    <div class="last">
+    <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                <button class="buttons3">
+                    <input class="three" type="text" placeholder="Email address">
+                    <button class="four">Get Started &gt;</button>
+                </button>
+            </div>
+
+    <div class="footer">
+  <div class="footer1">
+    <h4>Questions? Call 000-800-919-1694</h4>
+    <div class="footer2">
+      <a href="https://help.netflix.com/en/node/412" target="_blank" rel="noopener">FAQ</a>
+      <a href="https://help.netflix.com/en/" target="_blank" rel="noopener">Help Centre</a>
+      <a href="https://www.netflix.com/youraccount" target="_blank" rel="noopener">Account</a>
+      <a href="https://media.netflix.com" target="_blank" rel="noopener">Media Centre</a>
+      <a href="https://ir.netflix.net" target="_blank" rel="noopener">Investor Relations</a>
+      <a href="https://jobs.netflix.com" target="_blank" rel="noopener">Jobs</a>
+      <a href="https://help.netflix.com/en/node/14164" target="_blank" rel="noopener">Ways to Watch</a>
+      <a href="https://help.netflix.com/legal/termsofuse" target="_blank" rel="noopener">Terms of Use</a>
+      <a href="https://help.netflix.com/legal/privacy" target="_blank" rel="noopener">Privacy</a>
+      <a href="#" >Cookie Preferences</a>
+      <a href="https://help.netflix.com/legal/corpinfo" target="_blank" rel="noopener">Corporate Information</a>
+      <a href="https://help.netflix.com/en/contactus" target="_blank" rel="noopener">Contact Us</a>
+      <a href="https://fast.com" target="_blank" rel="noopener">Speed Test</a>
+      <a href="https://help.netflix.com/legal/notices" target="_blank" rel="noopener">Legal Notices</a>
+      <a href="https://www.netflix.com/in/browse/genre/839338" target="_blank" rel="noopener">Only on Netflix</a>
+    </div>
+  </div>
+
+   <button class="hione">
+                    艾A&nbsp;&nbsp;English&nbsp;&nbsp;▾
+                </button>
+
+
+                <h6>Netflix India</h6>
+                <h6>This page is protected by Google reCAPTCHA to ensure you're not a bot.</h6>
+
+</div>
+  
+
+<!-- <script>
+document.querySelectorAll(".four").forEach(function (btn) {
+  btn.addEventListener("click", async function () {
+    const input = btn.parentElement.querySelector(".three");
+    const res = await fetch("/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: input.value })
+    });
+    const data = await res.json();
+    alert(data.message);
+  });
+});
+</script> -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span id="closeBtn" class="close">&times;</span>
+    <video id="movieVideo" controls width="100%">
+      <source src="/static/vid.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+</body>
+
+</html>

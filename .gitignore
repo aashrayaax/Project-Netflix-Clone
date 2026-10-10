@@ -1,0 +1,12 @@
+# Ignore SQLite Database
+*.db
+netflix.db
+
+# Ignore Python Cache
+__pycache__/
+*.py[cod]
+
+# Ignore IDE / OS files
+.vscode/
+.idea/
+.DS_Store
